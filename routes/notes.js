@@ -7,7 +7,7 @@ const { findByIdAndUpdate, findOne, findById } = require('../models/Note');
 
 
 //ROUTE 1: get all the notes details using get "/api/notes/getuser". Login required
-router.get('/fetchallnotes', fetchuser, async (req, res) => {
+router.get('/fetchallnotes', async (req, res) => {
     try {
         const notes = await Note.find({ user: req.user.id });
         res.json(notes);
