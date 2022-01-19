@@ -13,7 +13,7 @@ router.get('/fetchallnotes', async (req, res) => {
         res.json(notes);
     } catch (error) {
         console.error(error.message);
-        res.status(500).send("Internal server error");
+        res.status(500).send(error);
       }
 });
 
