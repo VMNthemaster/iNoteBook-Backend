@@ -91,4 +91,8 @@ router.delete('/deletenote/:id', fetchuser, async (req, res) => {
     }
 });
 
+router.get('/newroute', (req, res) => {
+    res.json({msg: "aaa"})
+})
+
 module.exports = router;
